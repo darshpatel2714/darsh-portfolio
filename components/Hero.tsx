@@ -19,14 +19,14 @@ export function Hero() {
             <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse dark:hidden" />
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000 dark:hidden" />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center max-w-4xl mx-auto">
+            <div className="container mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+                <div className="text-center max-w-4xl mx-auto px-2">
                     {/* Greeting */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-primary font-medium mb-4 text-base tracking-wide"
+                        className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base tracking-wide"
                     >
                         👋 Hello, I&apos;m
                     </motion.p>
@@ -36,7 +36,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-wide"
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 tracking-wide"
                     >
                         <span className="gradient-text">{personalInfo.name}</span>
                     </motion.h1>
@@ -46,7 +46,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 tracking-wide"
+                        className="text-sm sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 sm:mb-8 tracking-wide px-2"
                     >
                         {personalInfo.title}
                     </motion.h2>
@@ -56,7 +56,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto mb-12 leading-relaxed tracking-wide"
+                        className="text-muted-foreground text-xs sm:text-sm md:text-base max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed tracking-wide px-2"
                     >
                         Passionate about creating modern, responsive, and visually appealing
                         web experiences using cutting-edge technologies.
@@ -67,12 +67,12 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                        className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
                     >
                         <Link
                             href="#projects"
                             className={cn(
-                                "group flex items-center gap-2 px-8 py-4 rounded-xl",
+                                "group flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base",
                                 "bg-primary text-primary-foreground font-semibold",
                                 "hover:scale-105 hover:shadow-lg hover:shadow-primary/30",
                                 "transition-all duration-300"
@@ -84,7 +84,7 @@ export function Hero() {
                         <Link
                             href="#contact"
                             className={cn(
-                                "group flex items-center gap-2 px-8 py-4 rounded-xl",
+                                "group flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-base",
                                 "border-2 border-primary text-primary font-semibold",
                                 "hover:bg-primary hover:text-primary-foreground",
                                 "hover:scale-105 transition-all duration-300"
@@ -100,13 +100,13 @@ export function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="mt-16 flex flex-wrap items-center justify-center gap-3"
+                        className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-2"
                     >
                         {["React", "Next.js", "Node.js", "Python", "Flutter"].map((tech, index) => (
                             <span
                                 key={tech}
                                 className={cn(
-                                    "px-4 py-2 rounded-full text-sm font-medium",
+                                    "px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium",
                                     "bg-muted/50 text-muted-foreground border border-border",
                                     "hover:border-primary hover:text-primary transition-colors"
                                 )}

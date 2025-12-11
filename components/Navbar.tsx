@@ -47,16 +47,16 @@ export function Navbar() {
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                scrolled ? "glass py-3" : "bg-transparent py-5"
+                scrolled ? "glass py-3" : "bg-transparent py-4 sm:py-5"
             )}
         >
-            <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <nav className="container mx-auto px-5 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link
                         href="#home"
                         onClick={() => handleLinkClick("#home")}
-                        className="text-xl sm:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
+                        className="text-lg sm:text-xl md:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity whitespace-nowrap"
                     >
                         {"<Darsh />"}
                     </Link>
